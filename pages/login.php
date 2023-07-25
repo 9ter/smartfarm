@@ -13,10 +13,10 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-if (isset($_POST['username']) && isset($_POST['password'])) {
+if (isset($_POST['username']) && isset($_POST['pass'])) {
     // รับข้อมูลจากฟอร์มล็อกอิน
     $username = $_POST['username'];
-    $password = $_POST['password'];
+    $password = $_POST['pass'];
 
     // ค้นหาผู้ใช้ในฐานข้อมูล
     $sql = "SELECT * FROM users WHERE username='$username' AND pass='$password'";
