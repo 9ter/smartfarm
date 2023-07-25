@@ -369,7 +369,7 @@ while ($row = mysqli_fetch_array($result)) {
 
           <div>
 
-          <iframe src="http://lesyslab.com:1884/ui/#!/0?socketid=QTBxpqlSHbQN8mqkAAER" title="description" height="200" width="100%"></iframe>
+          <iframe src="https://www.w3schools.com/html/html_iframe.asp" title="description" height="200" width="100%"></iframe>
          
           </div>
 
