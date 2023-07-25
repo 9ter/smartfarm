@@ -1,16 +1,14 @@
 <?php
-$servername = "127.0.0.1";
+$servername = "localhost";
 $username = "thanankornm";
 $password = "BrqHAmTC3w_ZRCut";
-$database = "smartfarm";
 
-try {
-    $conn = new PDO("mysql:host=$servername;dbname=$database", $username, $password);
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    echo "การเชื่อมต่อสำเร็จ";
-} catch(PDOException $e) {
-    echo "การเชื่อมต่อล้มเหลว: " . $e->getMessage();
+// Create connection
+$conn = new mysqli($servername, $username, $password);
+
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
 }
-
-$conn = null;
+echo "Connected successfully";
 ?>
