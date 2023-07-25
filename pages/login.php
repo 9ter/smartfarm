@@ -6,7 +6,7 @@ $_POST['username'];
 
 
 if(!isset($_POST['username'])  && !isset($_POST['pass'])){
-    header("Location: ./pages/login.html");
+    header("Location: login.html");
 }
 
 ?>
