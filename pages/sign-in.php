@@ -19,7 +19,7 @@
   <!-- Material Icons -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
   <!-- CSS Files -->
-  <link id="pagestyle" href="../assets/css/material-dashboard.css?v=3.1.4" rel="stylesheet" />
+  <link id="pagestyle" href="../assets/css/material-dashboard.css?v=3.1.3" rel="stylesheet" />
   <!-- Nepcha Analytics (nepcha.com) -->
   <!-- Nepcha is a easy-to-use web analytics. No cookies and fully compliant with GDPR, CCPA and PECR. -->
   <script defer data-site="YOUR_DOMAIN_HERE" src="https://api.nepcha.com/js/nepcha-analytics.js"></script>
@@ -67,11 +67,11 @@
               <div class="card-body">
                 <form role="form" class="text-start">
                   <div class="input-group input-group-outline my-3">
-                    <label class="">user</label>
+                    <label class="form-label">user</label>
                     <input type="text" class="form-control">
                   </div>
                   <div class="input-group input-group-outline mb-3">
-                    <label class="">Password</label>
+                    <label class="form-label">Password</label>
                     <input type="password" class="form-control">
                   </div>
                   <div class="form-check form-switch d-flex align-items-center mb-3">
