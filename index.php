@@ -1,5 +1,9 @@
 <?php
-
+session_start();
+if (!isset($_SESSION["username"])) {
+  header("Location: ./pages/sign-in.php"); // ถ้ายังไม่ได้เข้าสู่ระบบ กลับไปหน้า login_form.php
+  exit;
+}
 ?>
 
 
