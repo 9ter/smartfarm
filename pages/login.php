@@ -11,7 +11,7 @@ if(!isset($_POST['username'])  && !isset($_POST['pass'])){
     header("Location: login.html");
 }
 
-$sql = "SELECT id FROM admin WHERE username = '$myusername' and password = '$mypassword'";
+$sql = "SELECT id FROM admin WHERE username = '$myusername' and pass = '$mypassword'";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
