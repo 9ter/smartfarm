@@ -26,10 +26,13 @@ if (isset($_POST['username']) && isset($_POST['pass'])) {
     if ($result->num_rows > 0) {
         // ล็อกอินสำเร็จ
         echo "ล็อกอินสำเร็จ!";
+        header("Location: ../index.php");
     } else {
         // ล็อกอินไม่สำเร็จ
         echo "ชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้อง!";
     }
+}else{
+    header("Location: login.html");
 }
 
 ?>
