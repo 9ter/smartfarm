@@ -11,7 +11,7 @@ $sql = "SELECT * FROM sensor_box_1 ";
 $result = $conn->query($sql);
 
 while ($row = mysqli_fetch_array($result)) {
-  echo $row[0], $row[1];  
+  echo $row[1], $row[2];  
 }
 
 ?>
