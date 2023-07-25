@@ -2,9 +2,10 @@
 $servername = "localhost";
 $username = "thanankornm";
 $password = "BrqHAmTC3w_ZRCut";
+$dbname = "smartfarm";
 
 // Create connection
-$conn = new mysqli($servername, $username, $password);
+$conn = new mysqli($servername, $username, $password, $dbname);
 
 // Check connection
 if ($conn->connect_error) {
