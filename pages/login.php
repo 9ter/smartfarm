@@ -1,6 +1,17 @@
 <?php
 
-include '../config.php';
+$servername = "localhost";
+$username = "thanankornm";
+$password = "BrqHAmTC3w_ZRCut";
+$dbname = "smartfarm";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
 
 if (isset($_POST['username']) && isset($_POST['password'])) {
     // รับข้อมูลจากฟอร์มล็อกอิน
