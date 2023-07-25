@@ -31,8 +31,6 @@ if (isset($_POST['username']) && isset($_POST['pass'])) {
         // ล็อกอินไม่สำเร็จ
         echo "ชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้อง!";
     }
-}else{
-    header("Location: login.html");
 }
 
 ?>
