@@ -367,7 +367,7 @@ while ($row = mysqli_fetch_array($result)) {
             </div>
           </div>
 
-          <div class="row">
+          <div>
 
           <iframe src="http://lesyslab.com:1884/ui/#!/0?socketid=QTBxpqlSHbQN8mqkAAER" title="description"></iframe>
          
