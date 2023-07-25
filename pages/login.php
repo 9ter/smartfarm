@@ -1,17 +1,7 @@
 <?php
 
-$servername = "localhost";
-$username = "thanankornm";
-$password = "BrqHAmTC3w_ZRCut";
-$dbname = "smartfarm";
+include '../config.php';
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
 
 if (isset($_POST['username']) && isset($_POST['pass'])) {
     // รับข้อมูลจากฟอร์มล็อกอิน
@@ -26,6 +16,7 @@ if (isset($_POST['username']) && isset($_POST['pass'])) {
     if ($result->num_rows > 0) {
         // ล็อกอินสำเร็จ
         echo "ล็อกอินสำเร็จ!";
+        $_SESSION["username"] = $username;
         header("Location: ../index.php");
     } else {
         // ล็อกอินไม่สำเร็จ
