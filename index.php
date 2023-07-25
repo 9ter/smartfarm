@@ -1,12 +1,18 @@
 <?php
 
 session_start();
+include './config.php';
 if (!isset($_SESSION["username"])) {
   header("Location: ./pages/login.html"); // ถ้ายังไม่ได้เข้าสู่ระบบ กลับไปหน้า login_form.php
   exit;
 }
 
+$sql = "SELECT * FROM sensor_box_1 ";
+$result = $conn->query($sql);
 
+while ($row = mysqli_fetch_array($result)) {
+  echo $row[0], $row[1];  
+}
 
 ?>
 
@@ -139,7 +145,7 @@ if (!isset($_SESSION["username"])) {
 
 
 
-       
+
 
 
         <li class="nav-item">
@@ -228,7 +234,7 @@ if (!isset($_SESSION["username"])) {
         <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
           <div class="ms-md-auto pe-md-3 d-flex align-items-center">
 
-           
+
 
           </div>
           <ul class="navbar-nav  justify-content-end">
