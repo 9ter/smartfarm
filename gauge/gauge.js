@@ -1,5 +1,5 @@
 // JS
-var chart = JSC.chart("chartDiv", {
+var chart1 = JSC.chart("chartDiv1", {
   debug: true,
   type: "gauge",
   animation_duration: 1000,
@@ -85,19 +85,15 @@ var chart2 = JSC.chart("chartDiv2", {
   ],
 });
 
-
 function setGauge(max, y) {
-  chart.series(0).options({
+  chart1.series(0).options({
     points: [{ id: "1", x: "speed", y: y }],
   });
   chart2.series(0).options({
-    points: [{ id: "1", x: "speed", y: parseInt(arr[0]["soiltem"]) }],
+    points: [{ id: "1", x: "speed", y: y }],
   });
   //chart.annotations('anVal').options({ label_text: JSC.formatNumber(y, 'n1') });
 }
-
-
-
 
 fetch("get_data.php")
   .then((response) => response.json())
