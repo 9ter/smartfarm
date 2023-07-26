@@ -327,7 +327,8 @@ while ($row = mysqli_fetch_array($result)) {
 
     <!-- End Navbar -->
 
-    <div id="result"></div>
+    <div id="chartDiv" style="max-width: 450px;height: 250px;margin: 0px auto">
+    </div>
 
     <!--   Core JS Files   -->
     <script src="./assets/js/core/popper.min.js"></script>
@@ -336,6 +337,8 @@ while ($row = mysqli_fetch_array($result)) {
     <script src="./assets/js/plugins/smooth-scrollbar.min.js"></script>
 
     <script src="./get_json.js?v=1.0"></script>
+    <script src="./gauge.js?v=1.0"></script>
+
 
 
 </body>
