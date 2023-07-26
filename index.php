@@ -369,25 +369,6 @@ while ($row = mysqli_fetch_array($result)) {
     <script src="./gauge/gauge.js?v=1.2"></script>
     <script src="./gauge/gauge_tem.js?v=1.2"></script>
 
-    <script>
-      // ... โค้ดของส่วนอื่น ๆ ที่คุณให้มาก่อนหน้า ...
-
-      // ฟังก์ชัน resizeCharts เพิ่มเติมเพื่อปรับขนาดแผนภูมิเมื่อเปลี่ยนขนาดหน้าจอ
-      function resizeCharts() {
-        const chartDivs = document.getElementsByClassName("chartDiv");
-        for (let i = 0; i < chartDivs.length; i++) {
-          chartDivs[i].style.maxWidth = "450px";
-          chartDivs[i].style.height = "250px";
-          chartDivs[i].style.margin = "0px auto";
-        }
-      }
-
-      window.addEventListener("resize", function () {
-        resizeCharts();
-      });
-
-      resizeCharts();
-    </script>
 
   </main>
 
