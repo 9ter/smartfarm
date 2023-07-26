@@ -111,6 +111,7 @@ fetch("get_data.php")
     console.log(arr[0]["light"]);
 
     setGauge(1, parseInt(arr[0]["light"]));
+    setGauge(2, parseInt(arr[0]["soiltem"]));
 
     // เช่น แสดงผลข้อมูลในหน้าเว็บ
     /*const resultDiv = document.getElementById("result");
