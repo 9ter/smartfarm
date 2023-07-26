@@ -87,7 +87,7 @@ fetch("get_data.php")
     const arr = data;
 
     // สามารถนำ arr ไปใช้งานตามต้องการ
-    console.log(arr[1]);
+    console.log(arr);
 
     
 
