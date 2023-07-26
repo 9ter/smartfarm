@@ -108,13 +108,10 @@ fetch("get_data.php")
     const arr = data;
 
     // สามารถนำ arr ไปใช้งานตามต้องการ
-    console.log(arr[0]["light"]);
+    //console.log(arr[0]["light"]);
 
     setGauge(1, parseInt(arr[0]["light"]));
     setGauge(2, parseInt(arr[0]["soiltem"]));
 
-    // เช่น แสดงผลข้อมูลในหน้าเว็บ
-    /*const resultDiv = document.getElementById("result");
-    resultDiv.innerHTML = JSON.stringify(arr, null, 2);*/
   })
   .catch((error) => console.error("Error:", error));
