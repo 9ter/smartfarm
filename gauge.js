@@ -68,9 +68,9 @@ fetch("get_data.php")
     // สามารถนำ arr ไปใช้งานตามต้องการ
     console.log(arr[0]["light"]);
 
-    setGauge(0, parseInt(arr[0]["light"]));
-    setGauge(1, parseInt(arr[0]["soiltem"]));
-    setGauge(2, parseInt(arr[0]["airtem"]));
+    setGauge(1, parseInt(arr[0]["light"]));
+    setGauge(2, parseInt(arr[0]["soiltem"]));
+    setGauge(3, parseInt(arr[0]["airtem"]));
 
   })
   .catch((error) => console.error("Error:", error));
