@@ -219,6 +219,9 @@ while ($row = mysqli_fetch_array($result)) {
                 </div>
               </a>
             </li>
+            <li class="nav-item px-3 d-flex align-items-center">
+            &nbsp;&nbsp;&nbsp;
+            </li>
             <li class="nav-item dropdown pe-2 d-flex align-items-center">
               <a href="javascript:;" class="nav-link text-body p-0" id="dropdownMenuButton" data-bs-toggle="dropdown"
                 aria-expanded="false">
@@ -308,7 +311,7 @@ while ($row = mysqli_fetch_array($result)) {
                 </span>
               </a>
             </li>
-            <li><span class="d-sm-inline d-none">&nbsp;&nbsp;</span></li>
+            <li><span class="d-sm-inline d-none">&nbsp;&nbsp;&nbsp;</span></li>
             <li class="nav-item d-flex align-items-center">
               <a href="./pages/logout.php" class="nav-link text-body font-weight-bold px-0">
                 <i class="fa fa-sign-out"></i>
