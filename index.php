@@ -335,7 +335,27 @@ while ($row = mysqli_fetch_array($result)) {
     <script src="./assets/js/plugins/perfect-scrollbar.min.js"></script>
     <script src="./assets/js/plugins/smooth-scrollbar.min.js"></script>
 
-    
+    <script>
+
+
+Result Size: 753 x 599
+      var mysql = require('mysql');
+
+      var con = mysql.createConnection({
+        host: "localhost",
+        user: "thanankornm",
+        password: "BrqHAmTC3w_ZRCut"
+      });
+
+      con.connect(function (err) {
+        if (err) throw err;
+        console.log("Connected!");
+      });
+
+
+    </script>
+
+
 
 
 </body>
