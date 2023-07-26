@@ -39,10 +39,6 @@ var chart = JSC.chart("chartDiv", {
       type: "column roundcaps",
       points: [{ id: "1", x: "speed", y: 0 }],
     },
-    {
-      type: "column roundcaps",
-      points: [{ id: "2", x: "speed", y: 0 }],
-    },
   ],
 });
 
