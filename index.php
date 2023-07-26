@@ -318,11 +318,13 @@ while ($row = mysqli_fetch_array($result)) {
               </ul>
             </li>
             <li class="nav-item d-flex align-items-center">
+                <i class="fa fa-user me-sm-1"></i>
+                <span class="d-sm-inline d-none"><?php echo $_SESSION["username"]; ?></span>
+            </li>
+            <li class="nav-item d-flex align-items-center">
               <a href="./pages/sign-in.php" class="nav-link text-body font-weight-bold px-0">
                 <i class="fa fa-user me-sm-1"></i>
-
-                <span class="d-sm-inline d-none"><?php echo $_SESSION["username"]; ?></span>
-
+                <span class="d-sm-inline d-none">Sign out</span>
               </a>
             </li>
           </ul>
