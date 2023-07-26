@@ -3,7 +3,7 @@
 include 'config.php';
 
 
-$sql = "SELECT * FROM sensor_box_1";
+$sql = "SELECT * FROM sensor_box_1 ORDER BY id DESC LIMIT 1";
 $result = $conn->query($sql);
 
 

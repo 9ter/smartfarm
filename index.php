@@ -337,7 +337,6 @@ while ($row = mysqli_fetch_array($result)) {
     <script src="./assets/js/plugins/smooth-scrollbar.min.js"></script>
     <script src="https://code.jscharting.com/latest/jscharting.js"></script>
 
-    <script src="./get_json.js?v=1.0"></script>
     <script src="./gauge.js?v=1.1"></script>
 
 

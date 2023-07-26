@@ -90,7 +90,7 @@ fetch("get_data.php")
     console.log(arr);
 
     // เช่น แสดงผลข้อมูลในหน้าเว็บ
-    const resultDiv = document.getElementById("result");
-    resultDiv.innerHTML = JSON.stringify(arr, null, 2);
+    /*const resultDiv = document.getElementById("result");
+    resultDiv.innerHTML = JSON.stringify(arr, null, 2);*/
   })
   .catch((error) => console.error("Error:", error));
