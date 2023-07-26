@@ -85,33 +85,33 @@ var chart2 = JSC.chart("chartDiv2", {
   ],
 });
 
-const arr = [];
+
+function setGauge(max, y) {
+  chart.series(0).options({
+    points: [{ id: "1", x: "speed", y: y }],
+  });
+  chart2.series(0).options({
+    points: [{ id: "1", x: "speed", y: y }],
+  });
+  //chart.annotations('anVal').options({ label_text: JSC.formatNumber(y, 'n1') });
+}
+
+
+
 
 fetch("get_data.php")
   .then((response) => response.json())
   .then((data) => {
     // นำข้อมูลที่ได้มาเก็บในตัวแปร arr
-    arr = data;
+    const arr = data;
 
     // สามารถนำ arr ไปใช้งานตามต้องการ
     console.log(arr[0]["light"]);
 
-    //setGauge(500, parseInt(arr[0]["light"]));
+    setGauge(500, parseInt(arr[0]["light"]));
 
     // เช่น แสดงผลข้อมูลในหน้าเว็บ
     /*const resultDiv = document.getElementById("result");
     resultDiv.innerHTML = JSON.stringify(arr, null, 2);*/
   })
   .catch((error) => console.error("Error:", error));
-
-function setGauge() {
-  chart.series(0).options({
-    points: [{ id: "1", x: "speed", y: 500 }],
-  });
-  chart2.series(0).options({
-    points: [{ id: "1", x: "speed", y: parseInt(arr[0]["light"]) }],
-  });
-  //chart.annotations('anVal').options({ label_text: JSC.formatNumber(y, 'n1') });
-}
-
-setGauge();
