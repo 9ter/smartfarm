@@ -84,7 +84,7 @@ var chart2 = JSC.chart("chartDiv2", {
   ],
 });
 
-var chart3 = JSC.chart("chartDiv2", {
+var chart3 = JSC.chart("chartDiv3", {
   debug: true,
   type: "gauge",
   animation_duration: 1000,
@@ -127,7 +127,7 @@ var chart3 = JSC.chart("chartDiv2", {
   ],
 });
 
-var chart4 = JSC.chart("chartDiv2", {
+var chart4 = JSC.chart("chartDiv4", {
   debug: true,
   type: "gauge",
   animation_duration: 1000,
@@ -170,7 +170,7 @@ var chart4 = JSC.chart("chartDiv2", {
   ],
 });
 
-var chart5 = JSC.chart("chartDiv2", {
+var chart5 = JSC.chart("chartDiv5", {
   debug: true,
   type: "gauge",
   animation_duration: 1000,
@@ -213,7 +213,7 @@ var chart5 = JSC.chart("chartDiv2", {
   ],
 });
 
-var chart6 = JSC.chart("chartDiv2", {
+var chart6 = JSC.chart("chartDiv6", {
   debug: true,
   type: "gauge",
   animation_duration: 1000,
@@ -256,7 +256,7 @@ var chart6 = JSC.chart("chartDiv2", {
   ],
 });
 
-var chart7 = JSC.chart("chartDiv2", {
+var chart7 = JSC.chart("chartDiv7", {
   debug: true,
   type: "gauge",
   animation_duration: 1000,
