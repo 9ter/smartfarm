@@ -15,6 +15,12 @@ if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
         $data[] = $row;
     }
+
+      // แปลงข้อมูลในรูปแบบของ PHP array เป็น JSON
+      $jsonData = json_encode($data);
+
+      // แสดงผล JSON
+      echo $jsonData;
 }
 
 
