@@ -336,7 +336,11 @@ while ($row = mysqli_fetch_array($result)) {
     <script src="./assets/js/plugins/smooth-scrollbar.min.js"></script>
 
 
+    <script >
 
+console.log("hello");
+
+    </script>
 
 
 </body>
