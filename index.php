@@ -335,7 +335,7 @@ while ($row = mysqli_fetch_array($result)) {
                 <?php echo $_SESSION["username"]; ?>
               </span>
             </li>
-            <li><span class="d-sm-inline d-none">  </span></li>
+            <li><span class="d-sm-inline d-none">&nbsp;&nbsp;</span></li>
             <li class="nav-item d-flex align-items-center">
               <a href="./pages/sign-in.php" class="nav-link text-body font-weight-bold px-0">
                 <i class="fa fa-sign-out"></i>
