@@ -1,4 +1,5 @@
 // JS
+
 var chart1 = JSC.chart("chartDiv1", {
   debug: true,
   type: "gauge",
@@ -85,14 +86,19 @@ var chart2 = JSC.chart("chartDiv2", {
   ],
 });
 
-function setGauge(max, y) {
-  chart1.series(0).options({
-    points: [{ id: "1", x: "speed", y: y }],
-  });
-  chart2.series(0).options({
-    points: [{ id: "1", x: "speed", y: y }],
-  });
-  //chart.annotations('anVal').options({ label_text: JSC.formatNumber(y, 'n1') });
+function setGauge(index, y) {
+  switch (index) {
+    case 1:
+      chart1.series(0).options({
+        points: [{ id: "1", x: "speed", y: y }],
+      });
+      break;
+    case 2:
+      chart2.series(0).options({
+        points: [{ id: "1", x: "speed", y: y }],
+      });
+      break;
+  }
 }
 
 fetch("get_data.php")
@@ -104,7 +110,7 @@ fetch("get_data.php")
     // สามารถนำ arr ไปใช้งานตามต้องการ
     console.log(arr[0]["light"]);
 
-    setGauge(0, parseInt(arr[0]["light"]));
+    setGauge(1, parseInt(arr[0]["light"]));
 
     // เช่น แสดงผลข้อมูลในหน้าเว็บ
     /*const resultDiv = document.getElementById("result");
