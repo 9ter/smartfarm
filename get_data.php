@@ -14,13 +14,13 @@ if ($conn->connect_error) {
 }
 
 // คำสั่ง SQL เพื่อดึงข้อมูลที่ต้องการจากฐานข้อมูล
-$sql = "SELECT value FROM sensor_box_1 ORDER BY id DESC LIMIT 1";
+$sql = "SELECT value FROM gauge_data ORDER BY id DESC LIMIT 1";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     // แปลงข้อมูลเป็นรูปแบบ JSON
     $row = $result->fetch_assoc();
-    $data = array('light' => $row['light']);
+    $data = array('value' => $row['value']);
     echo json_encode($data);
 } else {
     // ถ้าไม่พบข้อมูล ส่งค่าเป็น 0
