@@ -106,11 +106,10 @@ function setGauge(max, y) {
   chart.series(0).options({
     points: [{ id: "1", x: "speed", y: parseInt(arr[0]["light"]) }],
   });
-  chart.series(2).options({
-    points: [{ id: "2", x: "speed", y: parseInt(arr[0]["light"]) }],
-  });
   chart2.series(0).options({
     points: [{ id: "1", x: "speed", y: y }],
   });
   //chart.annotations('anVal').options({ label_text: JSC.formatNumber(y, 'n1') });
 }
+
+setGauge();
