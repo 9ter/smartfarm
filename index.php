@@ -331,6 +331,17 @@ while ($row = mysqli_fetch_array($result)) {
     </div>
     <div id="chartDiv2" style="max-width: 450px;height: 250px;margin: 0px auto">
     </div>
+    <div id="chartDiv3" style="max-width: 450px;height: 250px;margin: 0px auto">
+    </div>
+    <div id="chartDiv4" style="max-width: 450px;height: 250px;margin: 0px auto">
+    </div>
+    <div id="chartDiv5" style="max-width: 450px;height: 250px;margin: 0px auto">
+    </div>
+    <div id="chartDiv6" style="max-width: 450px;height: 250px;margin: 0px auto">
+    </div>
+    <div id="chartDiv7" style="max-width: 450px;height: 250px;margin: 0px auto">
+    </div>
+    
 
     <!--   Core JS Files   -->
     <script src="./assets/js/core/popper.min.js"></script>
