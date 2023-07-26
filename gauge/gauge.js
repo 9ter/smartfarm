@@ -94,7 +94,7 @@ fetch("get_data.php")
     // สามารถนำ arr ไปใช้งานตามต้องการ
     console.log(arr[0]["light"]);
 
-    setGauge(500, parseInt(arr[0]["light"]));
+    //setGauge(500, parseInt(arr[0]["light"]));
 
     // เช่น แสดงผลข้อมูลในหน้าเว็บ
     /*const resultDiv = document.getElementById("result");
@@ -102,12 +102,12 @@ fetch("get_data.php")
   })
   .catch((error) => console.error("Error:", error));
 
-function setGauge(max, y) {
+function setGauge() {
   chart.series(0).options({
     points: [{ id: "1", x: "speed", y: parseInt(arr[0]["light"]) }],
   });
   chart2.series(0).options({
-    points: [{ id: "1", x: "speed", y: y }],
+    points: [{ id: "1", x: "speed", y: parseInt(arr[0]["light"]) }],
   });
   //chart.annotations('anVal').options({ label_text: JSC.formatNumber(y, 'n1') });
 }
