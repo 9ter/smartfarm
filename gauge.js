@@ -34,7 +34,7 @@ var chart = JSC.chart("chartDiv", {
       },
     },
   },
-  series: [
+  /*series: [
     {
       type: "column roundcaps",
       points: [{ id: "1", x: "speed", y: 0 }],
@@ -87,9 +87,9 @@ fetch("get_data.php")
     const arr = data;
 
     // สามารถนำ arr ไปใช้งานตามต้องการ
-    console.log(arr[0]['light']);
+    console.log(arr[0]["light"]);
 
-    setGauge(500,parseInt(arr[0]['light']))
+    setGauge(500, parseInt(arr[0]["light"]));
 
     // เช่น แสดงผลข้อมูลในหน้าเว็บ
     /*const resultDiv = document.getElementById("result");
