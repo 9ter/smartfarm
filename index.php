@@ -329,10 +329,8 @@ while ($row = mysqli_fetch_array($result)) {
 
     <div id="chartDiv" style="max-width: 450px;height: 250px;margin: 0px auto">
     </div>
-
-    <div id="chartDiv1" style="width: 300px; height: 280px;margin: 0px auto;"></div>
-    <div id="chartDiv2" style="width: 300px; height: 280px;margin: 0px auto;"></div>
-    <div id="chartDiv3" style="width: 300px; height: 280px;margin: 0px auto;"></div>
+    <div id="chartDiv2" style="max-width: 450px;height: 250px;margin: 0px auto">
+    </div>
 
     <!--   Core JS Files   -->
     <script src="./assets/js/core/popper.min.js"></script>
