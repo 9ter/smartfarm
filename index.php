@@ -72,7 +72,7 @@ while ($row = mysqli_fetch_array($result)) {
 
 
 
-  <link id="pagestyle" href="./assets/css/material-dashboard.css?v=3.1.5" rel="stylesheet" />
+  <link id="pagestyle" href="./assets/css/material-dashboard.css?v=3.1.6" rel="stylesheet" />
 
 
 
