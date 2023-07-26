@@ -16,12 +16,16 @@ if ($result->num_rows > 0) {
         $data[] = $row;
     }
 
-      // แปลงข้อมูลในรูปแบบของ PHP array เป็น JSON
-      $jsonData = json_encode($data);
+    // แปลงข้อมูลในรูปแบบของ PHP array เป็น JSON
+    $jsonData = json_encode($data);
 
-      // แสดงผล JSON
-      echo $jsonData;
+    // แสดงผล JSON
+    echo $jsonData;
+} else {
+    // ถ้าไม่พบข้อมูล ส่ง JSON ว่างๆ
+    echo json_encode(array());
 }
+
 
 
 ?>
