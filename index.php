@@ -371,6 +371,8 @@ while ($row = mysqli_fetch_array($result)) {
 
           <div>
 
+          <canvas id="gaugeChart"></canvas>
+
             <iframe src="https://www.google.com" title="description" height="200" width="100%"></iframe>
 
           </div>
@@ -898,6 +900,7 @@ while ($row = mysqli_fetch_array($result)) {
 
   <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
   <script src="./assets/js/material-dashboard.min.js?v=3.1.0"></script>
+  <script src="./gauge.js"></script>
 </body>
 
 </html>
