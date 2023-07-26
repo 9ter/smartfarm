@@ -20,7 +20,7 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // แปลงข้อมูลเป็นรูปแบบ JSON
     $row = $result->fetch_assoc();
-    $data = array('value' => $row['value']);
+    $data = array('light' => $row['light']);
     echo json_encode($data);
 } else {
     // ถ้าไม่พบข้อมูล ส่งค่าเป็น 0
