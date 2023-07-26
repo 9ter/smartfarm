@@ -393,7 +393,7 @@ while ($row = mysqli_fetch_array($result)) {
     <script src="./gauge/gauge.js?v=1.2"></script>
     <script src="./gauge/gauge_tem.js?v=1.2"></script>
 
-
+  </main>
 
 </body>
 
