@@ -48,6 +48,7 @@
   },
   "homepage": "http://creative-tim.com/product/material-dashboard",
   "dependencies": {
+    "express": "^4.18.2",
     "mysql": "^2.18.1"
   }
 }
