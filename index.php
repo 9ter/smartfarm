@@ -337,8 +337,6 @@ while ($row = mysqli_fetch_array($result)) {
 
     <script>
 
-
-Result Size: 753 x 599
       var mysql = require('mysql');
 
       var con = mysql.createConnection({
