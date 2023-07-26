@@ -40,12 +40,7 @@ var chart = JSC.chart("chartDiv", {
       points: [{ id: "1", x: "speed", y: 0 }],
     },
   ],
-  series: [
-    {
-      type: "column roundcaps",
-      points: [{ id: "2", x: "speed", y: 0 }],
-    },
-  ],
+  
   /*toolbar_items: { 
       Stop: { 
         type: 'option', 
