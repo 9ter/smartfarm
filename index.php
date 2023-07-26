@@ -113,8 +113,6 @@ while ($row = mysqli_fetch_array($result)) {
 
 
 
-
-
         <li class="nav-item">
           <a class="nav-link text-white " href="./dashboard.html">
 
@@ -125,8 +123,6 @@ while ($row = mysqli_fetch_array($result)) {
             <span class="nav-link-text ms-1">Dashboard</span>
           </a>
         </li>
-
-
         <li class="nav-item">
           <a class="nav-link text-white " href="./tables.html">
 
@@ -137,12 +133,6 @@ while ($row = mysqli_fetch_array($result)) {
             <span class="nav-link-text ms-1">Tables</span>
           </a>
         </li>
-
-
-
-
-
-
         <li class="nav-item">
           <a class="nav-link text-white " href="./rtl.html">
 
@@ -153,8 +143,6 @@ while ($row = mysqli_fetch_array($result)) {
             <span class="nav-link-text ms-1">RTL</span>
           </a>
         </li>
-
-
         <li class="nav-item">
           <a class="nav-link text-white " href="./notifications.html">
 
@@ -165,12 +153,9 @@ while ($row = mysqli_fetch_array($result)) {
             <span class="nav-link-text ms-1">Notifications</span>
           </a>
         </li>
-
-
         <li class="nav-item mt-3">
           <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Account pages</h6>
         </li>
-
         <li class="nav-item">
           <a class="nav-link text-white " href="./profile.html">
 
@@ -181,8 +166,6 @@ while ($row = mysqli_fetch_array($result)) {
             <span class="nav-link-text ms-1">Profile</span>
           </a>
         </li>
-
-
         <li class="nav-item">
           <a class="nav-link text-white " href="./sign-in.html">
 
@@ -204,13 +187,6 @@ while ($row = mysqli_fetch_array($result)) {
             <span class="nav-link-text ms-1">Sign Up</span>
           </a>
         </li>
-
-
-
-
-
-
-
       </ul>
     </div>
 
@@ -349,67 +325,12 @@ while ($row = mysqli_fetch_array($result)) {
 
     <!-- End Navbar -->
 
-  <!--   Core JS Files   -->
-  <script src="./assets/js/core/popper.min.js"></script>
-  <script src="./assets/js/core/bootstrap.min.js"></script>
-  <script src="./assets/js/plugins/perfect-scrollbar.min.js"></script>
-  <script src="./assets/js/plugins/smooth-scrollbar.min.js"></script>
+    <!--   Core JS Files   -->
+    <script src="./assets/js/core/popper.min.js"></script>
+    <script src="./assets/js/core/bootstrap.min.js"></script>
+    <script src="./assets/js/plugins/perfect-scrollbar.min.js"></script>
+    <script src="./assets/js/plugins/smooth-scrollbar.min.js"></script>
 
-  <script>
-    var gauge = {
-      title: { text: "Gauge Chart" },
-      data: { y: 71 }, //gauge value change it
-      maximum: 100
-    };
-
-    var chart = new CanvasJS.Chart("chartContainer");
-    createGauge(chart);
-
-    //Function for gauge
-    function createGauge(chart) {
-      //Caluculation of remaining parameters to render gauge with the help of doughnut
-      gauge.unoccupied = {
-        y: gauge.maximum - gauge.data.y,
-        color: "#DEDEDE",
-        toolTipContent: null,
-        highlightEnabled: false,
-        click: function () { gauge.unoccupied.exploded = true; }
-      }
-      gauge.data.click = function () { gauge.data.exploded = true; };
-      if (!gauge.data.color)
-        gauge.data.color = "#69C434";
-      gauge.valueText = { text: gauge.data.y.toString(), verticalAlign: "center" };
-
-      var data = {
-        type: "doughnut",
-        dataPoints: [
-          {
-            y: gauge.maximum,
-            color: "transparent",
-            toolTipContent: null
-          },
-          gauge.data,
-          gauge.unoccupied
-        ],
-      };
-
-      if (!chart.options.data)
-        chart.options.data = [];
-      chart.options.data.push(data);
-
-      if (gauge.title) {
-        chart.options.title = gauge.title;
-      }
-
-      //For showing value
-      if (!chart.options.subtitles)
-        chart.options.subtitles = [];
-      chart.options.subtitles.push(gauge.valueText);
-
-      chart.render();
-    }
-
-  </script>
 </body>
 
 </html>
