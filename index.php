@@ -328,21 +328,12 @@ while ($row = mysqli_fetch_array($result)) {
     <!-- End Navbar -->
 
     <style>
-      .column {
-        float: left;
-        width: 33.3%;
-        padding: 10px;
-        height: 300px;
+      .row {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
       }
 
-      .row:after {
-        content: "";
-        display: table;
-        clear: both;
-        width: 100%;
-      }
-
-      /* CSS for default style */
       .chartDiv {
         max-width: 450px;
         height: 250px;
@@ -351,35 +342,20 @@ while ($row = mysqli_fetch_array($result)) {
 
       /* Media query for small screens */
       @media screen and (max-width: 600px) {
-        .chartDiv {
-          max-width: 100%;
-          height: auto;
+        .row {
+          grid-template-columns: repeat(1, 1fr);
         }
       }
     </style>
 
     <div class="row">
-      <div class="column">
-        <div id="chartDiv1" class="chartDiv"></div>
-      </div>
-      <div class="column">
-        <div id="chartDiv2" class="chartDiv"></div>
-      </div>
-      <div class="column">
-        <div id="chartDiv3" class="chartDiv"></div>
-      </div>
-      <div class="column">
-        <div id="chartDiv4" class="chartDiv"></div>
-      </div>
-      <div class="column">
-        <div id="chartDiv5" class="chartDiv"></div>
-      </div>
-      <div class="column">
-        <div id="chartDiv6" class="chartDiv"></div>
-      </div>
-      <div class="column">
-        <div id="chartDiv7" class="chartDiv"></div>
-      </div>
+      <div class="chartDiv" id="chartDiv1"></div>
+      <div class="chartDiv" id="chartDiv2"></div>
+      <div class="chartDiv" id="chartDiv3"></div>
+      <div class="chartDiv" id="chartDiv4"></div>
+      <div class="chartDiv" id="chartDiv5"></div>
+      <div class="chartDiv" id="chartDiv6"></div>
+      <div class="chartDiv" id="chartDiv7"></div>
     </div>
 
 
@@ -392,6 +368,26 @@ while ($row = mysqli_fetch_array($result)) {
 
     <script src="./gauge/gauge.js?v=1.2"></script>
     <script src="./gauge/gauge_tem.js?v=1.2"></script>
+
+    <script>
+      // ... โค้ดของส่วนอื่น ๆ ที่คุณให้มาก่อนหน้า ...
+
+      // ฟังก์ชัน resizeCharts เพิ่มเติมเพื่อปรับขนาดแผนภูมิเมื่อเปลี่ยนขนาดหน้าจอ
+      function resizeCharts() {
+        const chartDivs = document.getElementsByClassName("chartDiv");
+        for (let i = 0; i < chartDivs.length; i++) {
+          chartDivs[i].style.maxWidth = "450px";
+          chartDivs[i].style.height = "250px";
+          chartDivs[i].style.margin = "0px auto";
+        }
+      }
+
+      window.addEventListener("resize", function () {
+        resizeCharts();
+      });
+
+      resizeCharts();
+    </script>
 
   </main>
 
