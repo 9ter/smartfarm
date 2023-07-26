@@ -39,6 +39,10 @@ var chart = JSC.chart("chartDiv", {
       type: "column roundcaps",
       points: [{ id: "1", x: "speed", y: 0 }],
     },
+    {
+      type: "column roundcaps",
+      points: [{ id: "2", x: "speed", y: 0 }],
+    },
   ],
 });
 
@@ -85,25 +89,11 @@ var chart2 = JSC.chart("chartDiv2", {
   ],
 });
 
-
-function setGauge(max, y) {
-  chart.series(0).options({
-    points: [{ id: "1", x: "speed", y: y }],
-  });
-  chart2.series(0).options({
-    points: [{ id: "1", x: "speed", y: y }],
-  });
-  //chart.annotations('anVal').options({ label_text: JSC.formatNumber(y, 'n1') });
-}
-
-
-
-
 fetch("get_data.php")
   .then((response) => response.json())
   .then((data) => {
     // นำข้อมูลที่ได้มาเก็บในตัวแปร arr
-    const arr = data;
+    var arr = data;
 
     // สามารถนำ arr ไปใช้งานตามต้องการ
     console.log(arr[0]["light"]);
@@ -115,3 +105,16 @@ fetch("get_data.php")
     resultDiv.innerHTML = JSON.stringify(arr, null, 2);*/
   })
   .catch((error) => console.error("Error:", error));
+
+function setGauge(max, y) {
+  chart.series(0).options({
+    points: [{ id: "1", x: "speed", y: parseInt(arr[0]["light"]) }],
+  });
+  chart.series(2).options({
+    points: [{ id: "2", x: "speed", y: parseInt(arr[0]["light"]) }],
+  });
+  chart2.series(0).options({
+    points: [{ id: "1", x: "speed", y: y }],
+  });
+  //chart.annotations('anVal').options({ label_text: JSC.formatNumber(y, 'n1') });
+}
