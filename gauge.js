@@ -18,7 +18,7 @@ var chart = JSC.chart("chartDiv", {
     scale_range: [0, 1000],
   },
   palette: {
-    pointValue: "{%value/100}",
+    pointValue: "{%value/1000}",
     colors: ["green", "yellow", "red"],
   },
   defaultTooltip_enabled: false,
