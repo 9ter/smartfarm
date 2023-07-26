@@ -58,7 +58,7 @@ var chart = JSC.chart('chartDiv', {
   }); 
   var INTERVAL_ID; 
     
-  playPause(); 
+  //playPause(); 
     
   function setGauge(max, y) { 
     chart 
