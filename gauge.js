@@ -89,7 +89,7 @@ fetch("get_data.php")
     // สามารถนำ arr ไปใช้งานตามต้องการ
     console.log(arr[0]['light']);
 
-    setGauge(500,arr[0]['light'])
+    setGauge(500,parseInt(arr[0]['light']))
 
     // เช่น แสดงผลข้อมูลในหน้าเว็บ
     /*const resultDiv = document.getElementById("result");
