@@ -8,5 +8,5 @@ $result = $conn->query($sql);
 
 
 
-$conn->close();
+
 ?>
