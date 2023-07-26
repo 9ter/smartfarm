@@ -39,27 +39,34 @@ var chart = JSC.chart("chartDiv", {
       type: "column roundcaps",
       points: [{ id: "1", x: "speed", y: 0 }],
     },
-    {
-      type: "column roundcaps",
-      points: [{ id: "2", x: "speed", y: 0 }],
-    },
-    {
-      type: "column roundcaps",
-      points: [{ id: "3", x: "speed", y: 0 }],
-    },
   ],
+  
+  
 });
+var INTERVAL_ID;
 
+//playPause();
 
-
-function setGauge(seriesIndex, y) {
-  chart.series(seriesIndex).options({
+function setGauge(max, y) {
+  chart.series(0).options({
     points: [{ id: "1", x: "speed", y: y }],
-    points: [{ id: "2", x: "speed", y: y }],
-    points: [{ id: "3", x: "speed", y: y }],
   });
   //chart.annotations('anVal').options({ label_text: JSC.formatNumber(y, 'n1') });
 }
+
+/*function playPause(val) { 
+    if (val) { 
+      clearInterval(INTERVAL_ID); 
+    } else { 
+      update(); 
+    } 
+  } */
+
+/*function update() { 
+    INTERVAL_ID = setInterval(function() { 
+      setGauge(100, Math.random() * 100); 
+    }, 1200); 
+  } */
 
 fetch("get_data.php")
   .then((response) => response.json())
@@ -68,11 +75,12 @@ fetch("get_data.php")
     const arr = data;
 
     // สามารถนำ arr ไปใช้งานตามต้องการ
-    console.log(arr[0]["light"]);
+    console.log(arr[0]['light']);
 
-    setGauge(0, parseInt(arr[0]["light"]));
-    setGauge(1, parseInt(arr[0]["soiltem"]));
-    setGauge(2, parseInt(arr[0]["airtem"]));
+    setGauge(500,parseInt(arr[0]['light']))
 
+    // เช่น แสดงผลข้อมูลในหน้าเว็บ
+    /*const resultDiv = document.getElementById("result");
+    resultDiv.innerHTML = JSON.stringify(arr, null, 2);*/
   })
   .catch((error) => console.error("Error:", error));
