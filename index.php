@@ -157,7 +157,7 @@ while ($row = mysqli_fetch_array($result)) {
           <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Account pages</h6>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white " href="">
+          <a class="nav-link text-white " href="./pages/profile.php">
 
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="material-icons opacity-10">person</i>
@@ -306,10 +306,12 @@ while ($row = mysqli_fetch_array($result)) {
               </ul>
             </li>
             <li class="nav-item d-flex align-items-center">
-              <i class="fa fa-user me-sm-1"></i>
-              <span class="d-sm-inline d-none">
-                <?php echo $_SESSION["username"]; ?>
-              </span>
+              <a href="./pages/profile.php" class="nav-link text-body font-weight-bold px-0">
+                <i class="fa fa-user me-sm-1"></i>
+                <span class="d-sm-inline d-none">
+                  <?php echo $_SESSION["username"]; ?>
+                </span>
+              </a>
             </li>
             <li><span class="d-sm-inline d-none">&nbsp;&nbsp;</span></li>
             <li class="nav-item d-flex align-items-center">
