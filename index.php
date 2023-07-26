@@ -338,21 +338,6 @@ while ($row = mysqli_fetch_array($result)) {
 
     <div class="container-fluid py-4">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <h6>If you are not redirected automatically, follow <a href=" https://demos.creative-tim.com/material-dashboard/pages/dashboard ">this link</a>.</h6>
       <div class="row">
         <div class="col-lg-7 position-relative z-index-2">
           <div class="card card-plain mb-4">
@@ -360,7 +345,7 @@ while ($row = mysqli_fetch_array($result)) {
               <div class="row">
                 <div class="col-lg-6">
                   <div class="d-flex flex-column h-100">
-                    <h2 class="font-weight-bolder mb-0">General Statistics</h2>
+                    <h2 class="font-weight-bolder mb-0">เกจ</h2>
                   </div>
                 </div>
               </div>
