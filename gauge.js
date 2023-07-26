@@ -55,6 +55,8 @@ var chart = JSC.chart("chartDiv", {
 function setGauge(seriesIndex, y) {
   chart.series(seriesIndex).options({
     points: [{ id: "1", x: "speed", y: y }],
+    points: [{ id: "2", x: "speed", y: y }],
+    points: [{ id: "3", x: "speed", y: y }],
   });
   //chart.annotations('anVal').options({ label_text: JSC.formatNumber(y, 'n1') });
 }
@@ -68,9 +70,9 @@ fetch("get_data.php")
     // สามารถนำ arr ไปใช้งานตามต้องการ
     console.log(arr[0]["light"]);
 
-    setGauge(1, parseInt(arr[0]["light"]));
-    setGauge(2, parseInt(arr[0]["soiltem"]));
-    setGauge(3, parseInt(arr[0]["airtem"]));
+    setGauge(0, parseInt(arr[0]["light"]));
+    setGauge(1, parseInt(arr[0]["soiltem"]));
+    setGauge(2, parseInt(arr[0]["airtem"]));
 
   })
   .catch((error) => console.error("Error:", error));
