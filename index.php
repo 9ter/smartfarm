@@ -330,59 +330,58 @@ while ($row = mysqli_fetch_array($result)) {
     <style>
       .column {
         float: left;
-        width: 100%;
+        width: 33.3%;
         padding: 10px;
         height: 300px;
-        /* Should be removed. Only for demonstration */
       }
 
-      /* Clear floats after the columns */
       .row:after {
         content: "";
         display: table;
         clear: both;
         width: 100%;
       }
+
+      /* CSS for default style */
+      .chartDiv {
+        max-width: 450px;
+        height: 250px;
+        margin: 0px auto;
+      }
+
+      /* Media query for small screens */
+      @media screen and (max-width: 600px) {
+        .chartDiv {
+          max-width: 100%;
+          height: auto;
+        }
+      }
     </style>
 
     <div class="row">
-
       <div class="column">
-        <div id="chartDiv1" style="max-width: 450px;height: 250px;margin: 0px auto">
-        </div>
+        <div id="chartDiv1" class="chartDiv"></div>
       </div>
-
       <div class="column">
-        <div id="chartDiv2" style="max-width: 450px;height: 250px;margin: 0px auto">
-        </div>
+        <div id="chartDiv2" class="chartDiv"></div>
       </div>
-
       <div class="column">
-        <div id="chartDiv3" style="max-width: 450px;height: 250px;margin: 0px auto">
-        </div>
+        <div id="chartDiv3" class="chartDiv"></div>
       </div>
-
       <div class="column">
-        <div id="chartDiv4" style="max-width: 450px;height: 250px;margin: 0px auto">
-        </div>
+        <div id="chartDiv4" class="chartDiv"></div>
       </div>
-
       <div class="column">
-        <div id="chartDiv5" style="max-width: 450px;height: 250px;margin: 0px auto">
-        </div>
+        <div id="chartDiv5" class="chartDiv"></div>
       </div>
-
       <div class="column">
-        <div id="chartDiv6" style="max-width: 450px;height: 250px;margin: 0px auto">
-        </div>
+        <div id="chartDiv6" class="chartDiv"></div>
       </div>
-
       <div class="column">
-        <div id="chartDiv7" style="max-width: 450px;height: 250px;margin: 0px auto">
-        </div>
+        <div id="chartDiv7" class="chartDiv"></div>
       </div>
-
     </div>
+
 
     <!--   Core JS Files   -->
     <script src="./assets/js/core/popper.min.js"></script>
@@ -391,10 +390,10 @@ while ($row = mysqli_fetch_array($result)) {
     <script src="./assets/js/plugins/smooth-scrollbar.min.js"></script>
     <script src="https://code.jscharting.com/latest/jscharting.js"></script>
 
-    <script src="./gauge/gauge.js?v=1.2"></script>
+    
     <script src="./gauge/gauge_tem.js?v=1.2"></script>
 
-
+    <script src="./gauge/gauge.js?v=1.2"></script>
 
 </body>
 
