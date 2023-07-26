@@ -15,7 +15,7 @@ var chart = JSC.chart("chartDiv", {
       color: "smartPalette",
       breaks_gap: 0.06,
     },
-    scale_range: [0, 100],
+    scale_range: [0, 1000],
   },
   palette: {
     pointValue: "{%value/100}",
