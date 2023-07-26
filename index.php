@@ -371,7 +371,7 @@ while ($row = mysqli_fetch_array($result)) {
 
           <div>
 
-          <canvas id="gaugeChart"></canvas>
+            <div id="chartContainer" style="height: 360px; width: 100%;"></div>
 
             <iframe src="https://www.google.com" title="description" height="200" width="100%"></iframe>
 
@@ -810,149 +810,61 @@ while ($row = mysqli_fetch_array($result)) {
   <script src="./assets/js/plugins/perfect-scrollbar.min.js"></script>
   <script src="./assets/js/plugins/smooth-scrollbar.min.js"></script>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   <script>
-    var win = navigator.platform.indexOf('Win') > -1;
-    if (win && document.querySelector('#sidenav-scrollbar')) {
-      var options = {
-        damping: '0.5'
+    var gauge = {
+      title: { text: "Gauge Chart" },
+      data: { y: 71 }, //gauge value change it
+      maximum: 100
+    };
+
+    var chart = new CanvasJS.Chart("chartContainer");
+    createGauge(chart);
+
+    //Function for gauge
+    function createGauge(chart) {
+      //Caluculation of remaining parameters to render gauge with the help of doughnut
+      gauge.unoccupied = {
+        y: gauge.maximum - gauge.data.y,
+        color: "#DEDEDE",
+        toolTipContent: null,
+        highlightEnabled: false,
+        click: function () { gauge.unoccupied.exploded = true; }
       }
-      Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
+      gauge.data.click = function () { gauge.data.exploded = true; };
+      if (!gauge.data.color)
+        gauge.data.color = "#69C434";
+      gauge.valueText = { text: gauge.data.y.toString(), verticalAlign: "center" };
+
+      var data = {
+        type: "doughnut",
+        dataPoints: [
+          {
+            y: gauge.maximum,
+            color: "transparent",
+            toolTipContent: null
+          },
+          gauge.data,
+          gauge.unoccupied
+        ],
+      };
+
+      if (!chart.options.data)
+        chart.options.data = [];
+      chart.options.data.push(data);
+
+      if (gauge.title) {
+        chart.options.title = gauge.title;
+      }
+
+      //For showing value
+      if (!chart.options.subtitles)
+        chart.options.subtitles = [];
+      chart.options.subtitles.push(gauge.valueText);
+
+      chart.render();
     }
+
   </script>
-
-  <!-- Github buttons -->
-  <script async defer src="https://buttons.github.io/buttons.js"></script>
-
-
-  <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
-  <script src="./assets/js/material-dashboard.min.js?v=3.1.0"></script>
-  <script>
-        // data for the gauge chart
-        // you can supply your own values here
-        // max is the Gauge's maximum value
-        var data = {
-            value: 200,
-            max: 300,
-            label: "Progress"
-        };
-
-        // Chart.js chart's configuration
-        // We are using a Doughnut type chart to 
-        // get a Gauge format chart 
-        // This is approach is fine and actually flexible
-        // to get beautiful Gauge charts out of it
-        var config = {
-            type: 'doughnut',
-            data: {
-                labels: [data.label],
-                datasets: [{
-                    data: [data.value, data.max - data.value],
-                    backgroundColor: ['rgba(54, 162, 235, 0.8)', 'rgba(0, 0, 0, 0.1)'],
-                    borderWidth: 0
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                cutoutPercentage: 85,
-                rotation: -90,
-                circumference: 180,
-                tooltips: {
-                    enabled: false
-                },
-                legend: {
-                    display: false
-                },
-                animation: {
-                    animateRotate: true,
-                    animateScale: false
-                },
-                title: {
-                    display: true,
-                    text: data.label,
-                    fontSize: 16
-                }
-            }
-        };
-
-        // Create the chart
-        var chartCtx = document.getElementById('gaugeChart').getContext('2d');
-        var gaugeChart = new Chart(chartCtx, config);
-    </script>
 </body>
 
 </html>
