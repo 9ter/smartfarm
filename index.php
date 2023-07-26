@@ -327,6 +327,71 @@ while ($row = mysqli_fetch_array($result)) {
 
     <!-- End Navbar -->
 
+    <style>
+      /* CSS สำหรับ gauge */
+      .gauge-container {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-color: #f1f1f1;
+        overflow: hidden;
+      }
+
+      .gauge {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 50%;
+        background-color: #007bff;
+        border-radius: 50% 0 0 50%;
+        transform-origin: 100% 50%;
+        transform: rotate(0deg);
+        transition: transform 0.5s ease;
+      }
+
+      .gauge-value {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 20px;
+        color: #000;
+      }
+    </style>
+
+    <div class="gauge-container">
+      <div class="gauge" id="gauge"></div>
+      <div class="gauge-value" id="gaugeValue">0</div>
+    </div>
+
+    <script>
+      // JavaScript สำหรับสร้าง gauge และดึงข้อมูลจาก MySQL
+      function updateGauge(value) {
+        const gauge = document.getElementById('gauge');
+        const gaugeValue = document.getElementById('gaugeValue');
+
+        // กำหนดค่าของ gauge โดยการหมุนตามค่าที่ได้รับจาก MySQL
+        const angle = value * 180 / 100;
+        gauge.style.transform = `rotate(${angle}deg)`;
+
+        // แสดงค่าที่ได้รับจาก MySQL บน gauge
+        gaugeValue.innerHTML = value;
+      }
+
+      // เรียกฟังก์ชันเพื่อดึงข้อมูลจาก MySQL และแสดง gauge
+      function fetchData() {
+        fetch('get_data.php')
+          .then(response => response.json())
+          .then(data => updateGauge(data.value))
+          .catch(error => console.error('Error:', error));
+      }
+
+      // ดึงข้อมูลและอัปเดต gauge ทุก ๆ 5 วินาที
+      setInterval(fetchData, 5000);
+    </script>
+
 
 
     <!--   Core JS Files   -->
