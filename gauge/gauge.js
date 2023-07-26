@@ -91,7 +91,7 @@ function setGauge(max, y) {
     points: [{ id: "1", x: "speed", y: y }],
   });
   chart2.series(0).options({
-    points: [{ id: "1", x: "speed", y: y }],
+    points: [{ id: "1", x: "speed", y: parseInt(arr[0]["soiltem"]) }],
   });
   //chart.annotations('anVal').options({ label_text: JSC.formatNumber(y, 'n1') });
 }
