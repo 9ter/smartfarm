@@ -85,11 +85,13 @@ var chart2 = JSC.chart("chartDiv2", {
   ],
 });
 
+const arr=[]
+
 fetch("get_data.php")
   .then((response) => response.json())
   .then((data) => {
     // นำข้อมูลที่ได้มาเก็บในตัวแปร arr
-    var arr = data;
+    arr = data;
 
     // สามารถนำ arr ไปใช้งานตามต้องการ
     console.log(arr[0]["light"]);
