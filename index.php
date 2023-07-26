@@ -327,6 +327,8 @@ while ($row = mysqli_fetch_array($result)) {
 
     <!-- End Navbar -->
 
+    <div id="result"></div>
+
     <!--   Core JS Files   -->
     <script src="./assets/js/core/popper.min.js"></script>
     <script src="./assets/js/core/bootstrap.min.js"></script>
