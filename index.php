@@ -341,6 +341,7 @@ while ($row = mysqli_fetch_array($result)) {
         content: "";
         display: table;
         clear: both;
+        width: 100%;
       }
     </style>
 
@@ -375,7 +376,7 @@ while ($row = mysqli_fetch_array($result)) {
         <div id="chartDiv6" style="max-width: 450px;height: 250px;margin: 0px auto">
         </div>
       </div>
-      
+
       <div class="column">
         <div id="chartDiv7" style="max-width: 450px;height: 250px;margin: 0px auto">
         </div>
