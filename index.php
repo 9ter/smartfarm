@@ -330,7 +330,7 @@ while ($row = mysqli_fetch_array($result)) {
     <style>
       .column {
         float: left;
-        width: 33.33%;
+        width: 100%;
         padding: 10px;
         height: 300px;
         /* Should be removed. Only for demonstration */
