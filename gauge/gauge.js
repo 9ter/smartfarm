@@ -85,7 +85,7 @@ var chart2 = JSC.chart("chartDiv2", {
   ],
 });
 
-const arr=[]
+const arr = [];
 
 fetch("get_data.php")
   .then((response) => response.json())
@@ -106,7 +106,7 @@ fetch("get_data.php")
 
 function setGauge() {
   chart.series(0).options({
-    points: [{ id: "1", x: "speed", y: parseInt(arr[0]["light"]) }],
+    points: [{ id: "1", x: "speed", y: 500 }],
   });
   chart2.series(0).options({
     points: [{ id: "1", x: "speed", y: parseInt(arr[0]["light"]) }],
