@@ -1,5 +1,5 @@
 // ใช้ fetch() เพื่อดึงข้อมูล JSON จากไฟล์ PHP
-fetch("your_php_file.php")
+fetch("get_data.php")
   .then((response) => response.json())
   .then((data) => {
     // นำข้อมูลที่ได้มาใช้งานตามต้องการ
@@ -8,3 +8,4 @@ fetch("your_php_file.php")
     resultDiv.innerHTML = JSON.stringify(data, null, 2);
   })
   .catch((error) => console.error("Error:", error));
+
