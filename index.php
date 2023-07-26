@@ -327,7 +327,7 @@ while ($row = mysqli_fetch_array($result)) {
 
     <!-- End Navbar -->
 
-    <div id="chartDiv" style="max-width: 450px;height: 250px;margin: 0px auto">
+    <div id="chartDiv1" style="max-width: 450px;height: 250px;margin: 0px auto">
     </div>
     <div id="chartDiv2" style="max-width: 450px;height: 250px;margin: 0px auto">
     </div>
