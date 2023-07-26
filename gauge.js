@@ -76,7 +76,7 @@ var chart = JSC.chart('chartDiv', {
       update(); 
     } 
   } */
-    
+  update();    
   function update() { 
     INTERVAL_ID = setInterval(function() { 
       setGauge(100, Math.random() * 100); 
