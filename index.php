@@ -333,7 +333,7 @@ while ($row = mysqli_fetch_array($result)) {
       }
 
       .chartDiv {
-        max-width: 250px;
+        max-width: 200px;
         height: 250px;
         margin: 0px auto;
       }
